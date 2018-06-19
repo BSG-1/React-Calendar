@@ -12,3 +12,5 @@ class Calendar extends React.Component {
         );
     }
 }
+
+export default Calendar;
