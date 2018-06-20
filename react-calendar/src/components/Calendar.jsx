@@ -32,7 +32,7 @@ class Calendar extends React.Component {
         )
     };
 
-    //this function shows the current day of the week
+    //this function shows the days of the week below the current calendar month
     renderDays() {
         const dateFormat = "dddd";
         const days = [];
