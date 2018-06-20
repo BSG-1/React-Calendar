@@ -8,7 +8,7 @@ class Calendar extends React.Component {
         selectedMonth: new Date()
     };
 
-    //this function shows the current month, and displays the right and left arrows 
+    //this function shows the current month, and displays the right and left arrows to change between months
     renderHeader() {
         const dateFormat = "MMMM YYYY";
         return (
