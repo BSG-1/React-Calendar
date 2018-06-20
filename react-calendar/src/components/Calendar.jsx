@@ -7,7 +7,18 @@ class Calendar extends React.Component {
         selectedMonth: new Date()
     };
 
-    renderHeader() { }
+    renderHeader() {
+        const dateFormat = "MMMM YYYY";
+        return (
+            <div className="header row flex-middle">
+                <div className="col col-start">
+                    <div className="icon" onClick={this.prevMonth}>
+                        chevron_left
+                    </div>
+                </div>
+            </div>
+        )
+    }
 
     renderDays() { }
 
@@ -21,10 +32,10 @@ class Calendar extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>Header</div>
-                <div>Days</div>
-                <div>Cells</div>
+            <div className="calendar">
+                {this.renderHeader()}
+                {this.renderDays()}
+                {this.renderCells()}
             </div>
         );
     }
