@@ -29,8 +29,8 @@ class Calendar extends React.Component {
                     </div>
                 </div>
             </div>
-        )
-    };
+        );
+    }
 
     //this function shows the days of the week below the current calendar month
     renderDays() {
@@ -48,11 +48,26 @@ class Calendar extends React.Component {
         }
 
         return <div className="days row">{days}</div>
-    };
+    }
 
     renderCells() {
+        const { currentMonth, selectedMonth } = this.state;
+        const monthStart = dateFns.startOfMonth(currentMonth);
+        const monthEnd = dateFns.endOfMonth(monthStart);
+        const startDate = dateFns.startOfWeek(monthStart);
+        const endDate = dateFns.endOfWeek(monthEnd);
 
-    };
+        const dateFormat = "D";
+        const rows = [];
+
+        let days = [];
+        let day = startDate;
+        let formattedDate = "";
+
+        while (day <= endDate) {
+
+        }
+    }
 
     onDateClick = day => {
 
@@ -80,7 +95,7 @@ class Calendar extends React.Component {
                 {this.renderCells()}
             </div>
         );
-    };
+    }
 }
 
 export default Calendar;
