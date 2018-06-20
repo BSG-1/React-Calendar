@@ -65,7 +65,10 @@ class Calendar extends React.Component {
         let formattedDate = "";
 
         while (day <= endDate) {
-
+            for (let i = 0; i < 7; i++) {
+                formattedDate = dateFns.format(day, dateFormat);
+                const cloneDay = day;
+            }
         }
     }
 
