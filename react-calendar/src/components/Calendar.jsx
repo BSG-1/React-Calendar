@@ -2,11 +2,13 @@ import React from "react";
 import dateFns from "date-fns";
 
 class Calendar extends React.Component {
+
     state = {
         currentMonth: new Date(),
         selectedMonth: new Date()
     };
 
+    //this function shows the current month, and displays the right and left arrows 
     renderHeader() {
         const dateFormat = "MMMM YYYY";
         return (
@@ -14,6 +16,16 @@ class Calendar extends React.Component {
                 <div className="col col-start">
                     <div className="icon" onClick={this.prevMonth}>
                         chevron_left
+                    </div>
+                </div>
+                <div className="col col-center">
+                    <span>
+                        {dateFns.format(this.state.currentMonth, dateFormat)}
+                    </span>
+                </div>
+                <div className="col col-end" onClick={this.nextMonth}>
+                    <div className="icon">
+                        chevron_right
                     </div>
                 </div>
             </div>

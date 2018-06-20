@@ -11,7 +11,7 @@ class App extends Component {
             <span className="icon">date_range</span>
             <br />
             <span>
-              react <b>calendar</b>
+              React <b>Calendar</b> Wassup
             </span>
           </div>
         </header>
