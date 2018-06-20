@@ -30,13 +30,21 @@ class Calendar extends React.Component {
                 </div>
             </div>
         )
-    }
+    };
 
-    renderDays() { }
+    //this function shows the current day of the week
+    renderDays() {
+        const dateFormat = "dddd";
+        const days = [];
+    };
 
-    renderCells() { }
+    renderCells() {
 
-    onDateClick = day => { };
+    };
+
+    onDateClick = day => {
+
+    };
 
     //right arrow goes to the next month (adds a month)
     nextMonth = () => {
@@ -60,7 +68,7 @@ class Calendar extends React.Component {
                 {this.renderCells()}
             </div>
         );
-    }
+    };
 }
 
 export default Calendar;
